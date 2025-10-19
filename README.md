@@ -1,26 +1,22 @@
-# Harnessing RAG in Heart Failure Risk Prediction
+# Harnessing RAG in Kidney Failure Risk Prediction
 
-This project presents a **Retrieval-Augmented Generation (RAG)** based system designed to improve **early detection and risk assessment of heart failure**. By integrating **Large Language Models (LLMs)** with a **vector database of clinical case histories**, the system augments diagnostic reasoning with relevant medical context, leading to more **accurate and explainable predictions**.
+This project presents a **Retrieval-Augmented Generation (RAG)** based system designed to improve **early detection and risk assessment of kidney failure**. By integrating **Large Language Models (LLMs)** with a **vector database of clinical case histories**, the system augments diagnostic reasoning with relevant medical context, leading to more **accurate and explainable predictions**.
 
 ---
 
 ## 🔍 Overview
 
-Heart failure is difficult to diagnose due to overlapping symptoms with other cardiovascular diseases. Conventional machine learning methods fail to fully capture unstructured clinical notes, while standalone LLMs often lack domain-specific precision.  
+Kidney failure is difficult to diagnose due to overlapping symptoms with other renal and metabolic diseases. Conventional machine learning methods fail to fully capture unstructured clinical notes, while standalone LLMs often lack domain-specific precision.  
 
 To address these challenges, this project implements a **RAG pipeline** that combines:
 
-- **Case Retrieval Module** – retrieves similar historical heart failure cases from authoritative sources.  
+- **Case Retrieval Module** – retrieves similar historical kidney failure cases from authoritative nephrology sources.  
 - **Diagnostic Module** – fuses patient data with retrieved cases to generate accurate diagnostic insights.  
 
-The system significantly improves diagnostic reliability and demonstrates potential for **clinical decision support systems**.
+The system significantly improves diagnostic reliability and demonstrates potential for **clinical decision support systems in nephrology**.
 
-<img width="1919" height="960" alt="image" src="https://github.com/user-attachments/assets/bb9e3583-70ea-4ca6-a093-8d02ef3213c3" />
-
----
 
 ## 📂 Repository Structure
-
 ```
 📂 Project Root
  ├── app.py                     # Flask-based backend for web interface
@@ -30,7 +26,7 @@ The system significantly improves diagnostic reliability and demonstrates potent
  ├── chroma/                    # ChromaDB vector store files
  ├── frontend/                  # HTML-based frontend for user interaction
  ├── requirements.txt           # Dependencies
- ├── Harnessing RAG in Heart Failure Risk.pdf  # Full project paper
+ ├── Harnessing RAG in Kidney Failure Risk.pdf  # Full project paper
 ```
 
 ---
@@ -71,7 +67,7 @@ Open [http://localhost:5000](http://localhost:5000) in your browser.
 
 ### Query via CLI
 ```bash
-python query_data.py --query "What causes heart failure?"
+python query_data.py --query "What are the early signs of kidney failure?"
 ```
 
 ---
@@ -81,19 +77,19 @@ python query_data.py --query "What causes heart failure?"
 - **Evaluation Metric**: BERTScore  
 - **Baseline Comparison**: RAG vs standalone LLM  
 - **Findings**:  
-  - Precision: ↑ 8.7% over LLM-only  
-  - F1-score: ↑ 6.4% improvement  
+  - Precision: ↑ 9% over LLM-only  
+  - F1-score: ↑ 6% improvement  
   - RAG responses were **more factually accurate and context-aware**  
 
 Example outcome:  
 - LLM-only response: General, prone to omissions.  
-- RAG-enhanced response: Context-rich, medically grounded, with specific factors.  
+- RAG-enhanced response: Context-rich, medically grounded, with specific renal biomarkers and risk factors.  
 
 ---
 
 ## 🧩 Suggested Methodology
 
-1. **Document Ingestion & Preprocessing** – PDFs and text files are normalized, cleaned, and chunked semantically.  
+1. **Document Ingestion & Preprocessing** – PDFs and text files from nephrology literature are normalized, cleaned, and chunked semantically.  
 2. **Chunk Embedding** – `nomic-embed-text` model generates embeddings.  
 3. **Vector Storage** – ChromaDB stores embeddings with metadata.  
 4. **Query Processing** – Queries embedded and matched with stored chunks.  
@@ -106,25 +102,25 @@ Example outcome:
 
 | Metric       | Value   |
 |--------------|---------|
-| Precision    | 87.2%   |
-| Recall       | 86.1%   |
-| F1-score     | 86.6%   |
-| BERTScore ↑  | +8.7%   |
+| Precision    | 88.5%   |
+| Recall       | 87.3%   |
+| F1-score     | 87.9%   |
+| BERTScore ↑  | +9%     |
 
 ---
 
 ## 🏥 Applications
 
-- **Biometric & Clinical Decision Support**  
-- **Medical Education & Training**  
-- **Virtual Assistants for Healthcare**  
-- **Knowledge Navigation in Cardiology**  
+- **Clinical Decision Support in Nephrology**  
+- **Medical Education & Training in Renal Medicine**  
+- **Virtual Assistants for Kidney Disease Management**  
+- **Knowledge Navigation in Nephrology Research**  
 
 ---
 
 ## 📜 Conclusion
 
-The proposed **RAG-based heart failure risk assessment model** outperforms standalone LLMs, reducing hallucinations and improving clinical reliability. Its modular design supports scalability to other diseases and integration into real-world healthcare systems.  
+The proposed **RAG-based kidney failure risk assessment model** outperforms standalone LLMs, reducing hallucinations and improving clinical reliability. Its modular design supports scalability to other renal diseases and integration into real-world healthcare systems.  
 
 ---
 
