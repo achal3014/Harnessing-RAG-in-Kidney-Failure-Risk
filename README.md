@@ -15,9 +15,6 @@ To address these challenges, this project implements a **RAG pipeline** that com
 
 The system significantly improves diagnostic reliability and demonstrates potential for **clinical decision support systems in nephrology**.
 
-<img width="1919" height="960" alt="image" src="https://github.com/user-attachments/assets/bb9e3583-70ea-4ca6-a093-8d02ef3213c3" />
-
----
 
 ## 📂 Repository Structure
 ```
